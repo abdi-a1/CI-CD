@@ -10,9 +10,9 @@ on:
                 default: '3.11'
                 type: choice
                 options:
-                - '3.11'
-                - '3.12'    
-                - '3.13'
+                - 3.11
+                - 3.12    
+                - 3.13
                 
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
 
       strategy:
         matrix:
-          python-version: '${{ github.event.inputs.python-version}}'
+          python-version: ["${{ github.event.inputs.python-version}}"]
 
       steps:
       - name: Checkout code
